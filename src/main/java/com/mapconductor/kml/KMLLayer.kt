@@ -31,8 +31,7 @@ fun MapViewScope.KMLLayer(
 ) {
     val featureCollector =
         remember {
-            OverlayCollector<KMLFeatureState, KMLFeatureFingerPrint>(
-                fingerPrintOf = { it.fingerPrint() },
+            OverlayCollector<KMLFeatureState>(
                 updateDebounce = Settings.Default.composeEventDebounce,
             )
         }
