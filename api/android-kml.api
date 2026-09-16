@@ -86,6 +86,7 @@ public final class com.mapconductor.kml.KMLFeatureState implements com.mapconduc
   public com.mapconductor.kml.KMLFeatureState(java.lang.String, com.mapconductor.kml.KMLGeometry, java.util.Map<java.lang.String, ? extends java.lang.Object>, java.lang.Integer, java.lang.Integer, java.lang.Float, java.lang.Float, boolean);
   public com.mapconductor.kml.KMLFeatureState(java.lang.String, com.mapconductor.kml.KMLGeometry, java.util.Map, java.lang.Integer, java.lang.Integer, java.lang.Float, java.lang.Float, boolean, int, kotlin.jvm.internal.DefaultConstructorMarker);
   public java.lang.String getId();
+  public com.mapconductor.core.StateMutationSignal getMutations();
   public final com.mapconductor.kml.KMLGeometry getGeometry();
   public final void setGeometry(com.mapconductor.kml.KMLGeometry);
   public final java.util.Map<java.lang.String, java.lang.Object> getProperties();
@@ -101,7 +102,6 @@ public final class com.mapconductor.kml.KMLFeatureState implements com.mapconduc
   public final boolean getVisible();
   public final void setVisible(boolean);
   public final com.mapconductor.kml.KMLFeatureFingerPrint fingerPrint();
-  public final kotlinx.coroutines.flow.Flow<com.mapconductor.kml.KMLFeatureFingerPrint> asFlow();
 }
 public final class com.mapconductor.kml.KMLFeatureState$Companion {
 }
@@ -297,6 +297,7 @@ public final class com.mapconductor.kml.KMLTileRenderer implements com.mapconduc
   public byte[] renderTile(com.mapconductor.core.tileserver.TileRequest);
   public final com.mapconductor.kml.KMLTileRenderer$KMLHitTestResult hitTest(double, double, java.lang.Double, java.lang.Double);
   public final com.mapconductor.kml.KMLFeature hitTestFeature(double, double, java.lang.Double, java.lang.Double);
+  public byte[] renderTile(com.mapconductor.core.tileserver.TileRequest, kotlin.jvm.functions.Function0<java.lang.Boolean>);
   public com.mapconductor.kml.KMLTileRenderer();
 }
 public final class com.mapconductor.kml.KMLTileRenderer$Companion {
